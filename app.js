@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require("mongoose");
-var dburl = "mongodb+srv://HandDutty:HandDutty@cluster0.gd4mv.mongodb.net/Handuty?retryWrites=true&w=majority"; //conexion mongo
+var dburl = process.env.MONGO_URL
 var indexRouter = require('./routes/index');
 var reservasRouter = require('./routes/reservas');
 var chatsRouter = require('./routes/chat');
